@@ -7,7 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitHubPushLib.Tests", "GitH
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5FDD7E30-B883-40B2-9CF7-5CF3360DBD21}"
 	ProjectSection(SolutionItems) = preProject
-		.travis.yml = .travis.yml
+		..\.gitignore = ..\.gitignore
+		..\.travis.yml = ..\.travis.yml
+		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{65DE1DFA-4D0B-442A-A0D0-27E2921DB202}"

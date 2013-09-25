@@ -39,10 +39,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abstractions\BaseFileResource.cs" />
+    <Compile Include="Abstractions\BaseFile.cs" />
     <Compile Include="Guard.cs" />
-    <Compile Include="IFile.cs" />
-    <Compile Include="Models\FileResource.cs" />
+    <Compile Include="Domain\File.cs" />
+    <Compile Include="Models\DiskFile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

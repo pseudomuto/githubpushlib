@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GitHubPushLib
 {
-    public abstract class BaseFileResource : IFile
+    public abstract class BaseFile : File
     {
         private Lazy<string> _content;
 
@@ -16,7 +16,7 @@ namespace GitHubPushLib
 
         public virtual string Content { get { return this._content.Value; } }
 
-        protected BaseFileResource(string filePath)
+        protected BaseFile(string filePath)
         {
             Guard.AgainstNullOrEmpty("filePath", filePath);
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GitHubPushLib
 {
-    public interface IFile
+    public interface File
     {
         string Name { get; }
 

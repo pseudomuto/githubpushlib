@@ -10,18 +10,18 @@ using System.IO;
 
 namespace GitHubPushLib.Tests.Models
 {
-    public class FileResource
+    public class DiskFile
     {
-        private IFile _subject = new GitHubPushLib.FileResource("Resources/content_file.gif");
+        private File _subject = new GitHubPushLib.DiskFile("Resources/content_file.gif");
 
-        public class Constructor : FileResource
+        public class Constructor : DiskFile
         {
             [Fact]
             public void RequiresFileName()
             {
                 Assert.Throws<ArgumentNullException>(() =>
                 {
-                    new GitHubPushLib.FileResource(string.Empty);
+                    new GitHubPushLib.DiskFile(string.Empty);
                 });
             }
 
@@ -39,7 +39,7 @@ namespace GitHubPushLib.Tests.Models
             }
         }
 
-        public class Content : FileResource
+        public class Content : DiskFile
         {
             [Fact]
             public void GetsFileContentsAsBase64String()

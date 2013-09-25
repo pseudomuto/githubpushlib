@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 
 namespace GitHubPushLib
 {
-    public class FileResource : BaseFileResource
+    public class DiskFile : BaseFile
     {
-        public FileResource(string filePath)
+        public DiskFile(string filePath)
             : base(filePath)
         {
         }
         
         protected override byte[] GetFileContents()
         {
-            return File.ReadAllBytes(this.Path);
+            return System.IO.File.ReadAllBytes(this.Path);
         }
     }
 }
