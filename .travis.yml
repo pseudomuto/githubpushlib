@@ -1,0 +1,13 @@
+language: c
+
+before_install:
+  - sudo apt-get update -qq > /dev/null
+  - sudo apt-get install -qq mono-devel mono-gmcs > /dev/null
+  - mozroots --import --sync
+  - chmod +x lib/xunit/xunit.console.clr4.exe
+  - export EnableNuGetPackageRestore=true  
+
+script:
+  - cd src/
+  - xbuild GitHubPushLib.sln
+  - mono ../lib/xunit/xunit.console.clr4.exe GitHubPushLib.Tests/bin/Debug/GitHubPushLib.Tests.dll
