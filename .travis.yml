@@ -2,7 +2,7 @@ language: c
 
 before_install:
   - sudo apt-get update -qq > /dev/null
-  - sudo apt-get install -qq mono-devel mono-gmcs > /dev/null
+  - sudo apt-get install -qq mono-complete > /dev/null
   - mozroots --import --sync
   - chmod +x lib/xunit/xunit.console.clr4.exe
   - export EnableNuGetPackageRestore=true  
