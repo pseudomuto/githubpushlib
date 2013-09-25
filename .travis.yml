@@ -1,7 +1,6 @@
 language: c
 
 before_install:
-  - mozroots --import --sync
   - chmod +x scripts/mono.sh
   - chmod +x lib/xunit/xunit.console.clr4.exe
   - export EnableNuGetPackageRestore=true  
