@@ -29,7 +29,7 @@ namespace GitHubPushLib
             if (existingFile != null)
             {
                 // set the hash to the existing one...
-                file.Hash = existingFile.Hash;
+                file.SHA = existingFile.SHA;
             }
 
             return existingFile == null ?

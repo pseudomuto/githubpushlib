@@ -14,6 +14,6 @@ namespace GitHubPushLib
 
         string Content { get; }
 
-        string Hash { get; set; }
+        string SHA { get; set; }
     }
 }

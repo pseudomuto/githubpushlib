@@ -12,6 +12,13 @@ namespace GitHubPushLib
         public DiskFile(string filePath)
             : base(filePath)
         {
+            this.Name = this.GetFileName(filePath);
+            this.Path = this.GetFullPath(filePath);
+
+            this._content = new Lazy<string>(() =>
+            {
+                return this.LoadContent();
+            });  
         }
         
         protected override byte[] GetFileContents()

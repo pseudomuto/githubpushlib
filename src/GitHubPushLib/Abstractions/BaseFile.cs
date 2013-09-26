@@ -8,27 +8,29 @@ namespace GitHubPushLib
 {
     public abstract class BaseFile : File
     {
-        private Lazy<string> _content;
+        protected Lazy<string> _content;
+        
+        public virtual string Name { get; set; }
 
-        public virtual string Name { get; private set; }
-
-        public virtual string Path { get; private set; }
+        public virtual string Path { get; set; }
 
         public virtual string Content { get { return this._content.Value; } }
 
-        public virtual string Hash { get; set; }
+        public virtual string SHA { get; set; }
 
         protected BaseFile(string filePath)
         {
             Guard.AgainstNullOrEmpty("filePath", filePath);
+        }
 
-            this.Name = System.IO.Path.GetFileName(filePath);
-            this.Path = System.IO.Path.GetFullPath(filePath);
+        protected virtual string GetFileName(string filePath)
+        {
+            return System.IO.Path.GetFileName(filePath);
+        }
 
-            this._content = new Lazy<string>(() =>
-            {
-                return this.LoadContent();
-            });            
+        protected virtual string GetFullPath(string filePath)
+        {
+            return System.IO.Path.GetFullPath(filePath);
         }
 
         protected virtual string LoadContent()
