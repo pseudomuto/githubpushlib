@@ -43,9 +43,8 @@ namespace GitHubPushLib
             body.content = file.Content;
 
             var request = new RestRequest(uri, Method.PUT);
+            PrepareRequest(authToken, request);
             request.AddBody(body);
-
-            PrepareRequest(authToken, request);            
 
             var response = this.ExecuteRequest<CommitResponse>(request);
             return response.Data.Content;
@@ -66,9 +65,8 @@ namespace GitHubPushLib
             body.sha = file.SHA;
 
             var request = new RestRequest(uri, Method.PUT);
-            request.AddBody(body);
-
             PrepareRequest(authToken, request);
+            request.AddBody(body);
 
             var response = this.ExecuteRequest<CommitResponse>(request);
             return response.Data.Content;

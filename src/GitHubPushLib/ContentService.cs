@@ -10,6 +10,11 @@ namespace GitHubPushLib
         private ContentRepo _repo;
         private string _authToken;
 
+        public ContentService(string authToken)
+            : this(authToken, new GitHubContentRepo())
+        {
+        }
+
         public ContentService(string authToken, ContentRepo repo = null)
         {
             Guard.AgainstNullOrEmpty("authToken", authToken);
