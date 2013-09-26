@@ -13,5 +13,7 @@ namespace GitHubPushLib
         string Path { get; }
 
         string Content { get; }
+
+        string Hash { get; set; }
     }
 }

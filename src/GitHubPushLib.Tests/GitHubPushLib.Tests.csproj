@@ -51,6 +51,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ContentService.cs" />
+    <Compile Include="Domain\FileTarget.cs" />
     <Compile Include="Models\DiskFile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

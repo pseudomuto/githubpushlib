@@ -16,6 +16,8 @@ namespace GitHubPushLib
 
         public virtual string Content { get { return this._content.Value; } }
 
+        public virtual string Hash { get; set; }
+
         protected BaseFile(string filePath)
         {
             Guard.AgainstNullOrEmpty("filePath", filePath);
@@ -26,7 +28,7 @@ namespace GitHubPushLib
             this._content = new Lazy<string>(() =>
             {
                 return this.LoadContent();
-            });
+            });            
         }
 
         protected virtual string LoadContent()

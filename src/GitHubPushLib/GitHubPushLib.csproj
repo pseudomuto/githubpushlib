@@ -41,6 +41,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstractions\BaseFile.cs" />
+    <Compile Include="ContentService.cs" />
+    <Compile Include="Domain\ContentRepo.cs" />
+    <Compile Include="Domain\FileTarget.cs" />
     <Compile Include="Guard.cs" />
     <Compile Include="Domain\File.cs" />
     <Compile Include="Models\DiskFile.cs" />
