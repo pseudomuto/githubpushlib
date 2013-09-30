@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package>
+  <metadata>
+    <id>GitHubPushLib</id>
+    <version>0.1.0</version>
+    <authors>pseudomuto</authors>
+    <owners>pseudomuto</owners>
+    <description>A simple library for pushing files to GitHub programmatically</description>
+    <language>en-US</language>
+    <projectUrl>https://github.com/pseudomuto/githubpushlib</projectUrl>
+    <licenseUrl>https://github.com/pseudomuto/githubpushlib/blob/master/LICENSE</licenseUrl>
+    <tags>HTTP API GITHUB</tags>
+    <releaseNotes>
+      <![CDATA[For full release notes see https://github.com/pseudomuto/githubpushlib/releases]]>
+    </releaseNotes>
+  </metadata>
+</package>
