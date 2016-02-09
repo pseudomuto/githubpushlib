@@ -13,5 +13,8 @@
     <releaseNotes>
       <![CDATA[For full release notes see https://github.com/pseudomuto/githubpushlib/releases]]>
     </releaseNotes>
+    <dependencies>
+      <dependency id="RestSharp" version="104.2.0" />
+    </dependencies>
   </metadata>
 </package>
